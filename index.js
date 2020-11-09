@@ -91,9 +91,9 @@ function finalScore(inningCB, inningPlayedCB){
   let awayScore= 0;
 
   for(let i = 0; i <= inningPlayedCB; i++){
-    const currentInning = inningCB(inningPlayedCB)
-    homeScore = homeScore + currentInning
-    awayScore = awayScore + currentInning
+    const currentScore = inningCB(inningPlayedCB)
+    homeScore = homeScore + currentScore
+    awayScore = awayScore + currentScore
     }
     return {
         Home: inningCB(),
@@ -158,22 +158,25 @@ Use the scoreboard function below to do the following:
 ]  
   */
 
-
 function scoreboard(getInningScoreCB, inningCB, inningPlayedCB) {
   const gameTotal = [];
-  let homeInning = 0;
-  let awayInning = 0;
+  let homeScore = 0;
+  let awayScore = 0;
 
-  for(let i = 0; i < inningPlayedCB; i++){
-    const currentInning = inningPlayedCB(inningCB)
-    homeInning = homeInning + currentInning.Home
-    awayInning = awayInning + currentInning.Away
-    gameTotal.push(`Inning ${i + 1}: Away ${currentInning.Away} - Home${currentInning.Home}`);
+  for(let i = 0; i <= inningPlayedCB; i++){
+    const currentScore = inningCB(inningPlayedCB)
+    homeScore = homeScore + currentScore.Home
+    awayScore = awayScore + currentScore.Away
+    gameTotal.push(`Inning ${i}: Away ${currentScore.Away} - Home ${currentScore.Home}`);
     }
     return gameTotal;
 }
-//console.log();
+//gameTotal.push(`Final Score: Away ${currentScore.Away} - Home ${currentScore.Home}`);
+//gameTotal.push(`This game will require extra innings: Away ${currentScore.Away} - Home ${currentScore.Home}`);
 
+
+
+console.log(scoreboard(getInningScore,inning, 9));
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
