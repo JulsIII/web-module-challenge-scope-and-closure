@@ -85,20 +85,35 @@ For example: invoking finalScore(inning, 9) might return this object:
 }
 */ 
 
-function finalScore(inningCB){
+function finalScore(inningCB, inningPlayedCB){
+  // const gameTotal = [];
+  // let homeInning = 0;
+  // let awayInning = 0;
+
+  // for(let i = 0; i < inningPlayedCB; i++){
+  //   const currentInning = inningPlayedCB(inningCB)
+  //   homeInning = homeInning + currentInning.Home
+  //   awayInning = awayInning + currentInning.Away
+  //   gameTotal.push(`Inning ${i + 1}: Away ${currentInning.Away} - Home${currentInning.Home}`);
+  //   }
+  //   return gameTotal;
   return {
     Home: inningCB(),
     Away: inningCB()
   }
-}
+
+  }
 
 /* Task 4: 
 // create a function called getInningScore 
 // the function should take the inning function as an argument 
 // it should return an object with with a score for home and a score for away that that populates from invoking the inning callback. */
 
-function getInningScore(/*Your Code Here */) {
-  /*Your Code Here */
+function getInningScore(inningCB) {
+  return {
+    Home: inningCB(),
+    Away: inningCB()
+  }
 }
 /* Task 5: scoreboard()
 Use the scoreboard function below to do the following:
@@ -145,7 +160,17 @@ Use the scoreboard function below to do the following:
 
 
 function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+  // const gameTotal = [];
+  // let homeInning = 0;
+  // let awayInning = 0;
+
+  // for(let i = 0; i < inningPlayedCB; i++){
+  //   const currentInning = inningPlayedCB(inningCB)
+  //   homeInning = homeInning + currentInning.Home
+  //   awayInning = awayInning + currentInning.Away
+  //   gameTotal.push(`Inning ${i + 1}: Away ${currentInning.Away} - Home${currentInning.Home}`);
+  //   }
+  //   return gameTotal;
 }
 
 
