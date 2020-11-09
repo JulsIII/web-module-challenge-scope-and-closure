@@ -86,23 +86,22 @@ For example: invoking finalScore(inning, 9) might return this object:
 */ 
 
 function finalScore(inningCB, inningPlayedCB){
-  // const gameTotal = [];
-  // let homeInning = 0;
-  // let awayInning = 0;
 
-  // for(let i = 0; i < inningPlayedCB; i++){
-  //   const currentInning = inningPlayedCB(inningCB)
-  //   homeInning = homeInning + currentInning.Home
-  //   awayInning = awayInning + currentInning.Away
-  //   gameTotal.push(`Inning ${i + 1}: Away ${currentInning.Away} - Home${currentInning.Home}`);
-  //   }
-  //   return gameTotal;
-  return {
-    Home: inningCB(),
-    Away: inningCB()
-  }
+  let homeScore = 0;
+  let awayScore= 0;
 
-  }
+  for(let i = 0; i <= inningPlayedCB; i++){
+    const currentInning = inningCB(inningPlayedCB)
+    homeScore = homeScore + currentInning
+    awayScore = awayScore + currentInning
+    }
+    return {
+        Home: inningCB(),
+        Away: inningCB()
+          }
+}
+
+//console.log(finalScore(inning, 9));
 
 /* Task 4: 
 // create a function called getInningScore 
@@ -115,6 +114,7 @@ function getInningScore(inningCB) {
     Away: inningCB()
   }
 }
+
 /* Task 5: scoreboard()
 Use the scoreboard function below to do the following:
   1. Receive a callback function, that you create, called `getInningScore`
@@ -159,20 +159,20 @@ Use the scoreboard function below to do the following:
   */
 
 
-function scoreboard(/* CODE HERE */) {
-  // const gameTotal = [];
-  // let homeInning = 0;
-  // let awayInning = 0;
+function scoreboard(getInningScoreCB, inningCB, inningPlayedCB) {
+  const gameTotal = [];
+  let homeInning = 0;
+  let awayInning = 0;
 
-  // for(let i = 0; i < inningPlayedCB; i++){
-  //   const currentInning = inningPlayedCB(inningCB)
-  //   homeInning = homeInning + currentInning.Home
-  //   awayInning = awayInning + currentInning.Away
-  //   gameTotal.push(`Inning ${i + 1}: Away ${currentInning.Away} - Home${currentInning.Home}`);
-  //   }
-  //   return gameTotal;
+  for(let i = 0; i < inningPlayedCB; i++){
+    const currentInning = inningPlayedCB(inningCB)
+    homeInning = homeInning + currentInning.Home
+    awayInning = awayInning + currentInning.Away
+    gameTotal.push(`Inning ${i + 1}: Away ${currentInning.Away} - Home${currentInning.Home}`);
+    }
+    return gameTotal;
 }
-
+//console.log();
 
 
 
