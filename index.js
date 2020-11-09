@@ -30,11 +30,14 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
-  
+    counter1 is making a varible out of a ftn, while counter2 is just making a ftn.
+
   2. Which of the two uses a closure? How can you tell?
-  
+    counter1 because it has a child calling on a var from the ftn right outside it, it's parent.
+
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+      counter1 for contained ftn useage, counter2 only if you need count to be a global var.
 */
 
 // counter1 code
@@ -63,9 +66,9 @@ Use the inning function below to do the following:
   For example: invoking inning() should return a numerical score value of 0, 1, or 2
 */
 
-function inning(/*Code Here*/){
+function inning(){
 
-    /*Code Here*/
+    return Math.floor(Math.random() * Math.floor(3));
 
 }
 
