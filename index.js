@@ -85,10 +85,11 @@ For example: invoking finalScore(inning, 9) might return this object:
 }
 */ 
 
-function finalScore(/*code Here*/){
-
-  /*Code Here*/
-
+function finalScore(inningCB){
+  return {
+    Home: inningCB(),
+    Away: inningCB()
+  }
 }
 
 /* Task 4: 
