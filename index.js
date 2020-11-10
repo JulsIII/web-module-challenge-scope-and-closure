@@ -167,14 +167,15 @@ function scoreboard(getInningScoreCB, inningCB, inningPlayedCB) {
     const currentScore = getInningScoreCB(inningCB);
     homeScore = homeScore + currentScore.Home;
     awayScore = awayScore + currentScore.Away;
-    gameTotal.push(`Inning ${i}: Away ${currentScore.Away} - Home ${currentScore.Home}`);
-    
-    // if(homeScore === awayScore){
-    // gameTotal.push(`This game will require extra innings: Away ${currentScore.Away} - Home ${currentScore.Home}`);
-    // } else {gameTotal.push(`Final Score: Away ${currentScore.Away} - Home ${currentScore.Home}`);
-    //         }
-    }
-    
+    gameTotal.push(`Inning ${i}: Away ${awayScore} - Home ${homeScore}`);
+
+  if(i >= inningPlayedCB){
+    if(homeScore === awayScore){
+    gameTotal.push(`This game will require extra innings: Away ${awayScore} - Home ${homeScore}`);
+    } else {gameTotal.push(`Final Score: Away ${awayScore} - Home ${homeScore}`);
+            }
+      }
+  }   
     return gameTotal;
 }
 
