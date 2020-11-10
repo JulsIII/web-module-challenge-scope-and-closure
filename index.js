@@ -30,14 +30,14 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
-    counter1 is making a varible out of a ftn, while counter2 is just making a ftn.
+    counter1 is making a varible and using it in a function while within a functionn, while counter2 is just making a function out of a given variable.
 
   2. Which of the two uses a closure? How can you tell?
-    counter1 because it has a child calling on a var from the ftn right outside it, it's parent.
+    counter1 because it has a child calling on a var from the function outside of itself, which is it's parent.
 
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
-      counter1 for contained ftn useage, counter2 only if you need count to be a global var.
+      counter1 for making a function with closure(a more closed system), and counter2 only if you need count to be a global variable.
 */
 
 // counter1 code
@@ -67,9 +67,7 @@ Use the inning function below to do the following:
 */
 
 function inning(){
-
     return Math.floor(Math.random() * Math.floor(3));
-
 }
 
 /* Task 3: finalScore()
@@ -89,9 +87,7 @@ function finalScore(inningCB, inningPlayedCB){
 
   let homeScore = 0;
   let awayScore= 0;
-
   for(let i = 0; i <= inningPlayedCB; i++){
-   //const currentScore = inningCB(inningPlayedCB)
     homeScore = homeScore + inningCB()
     awayScore = awayScore + inningCB()
     }

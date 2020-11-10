@@ -80,7 +80,7 @@ Once you begin, you will have 15 minutes to answer the questions [here](https://
   Done!
 The completion of these questions is mandatory for MVP. However, passing the quiz doesn't affect your standing as a Lambda School student whatsoever. This is Lambda School testing itself! Please answer honestly and to the best of your ability without using external references.
   Done!
-  
+
 ### Task 3 - Stretch Goals
 
 After you have completed the requirements, **create** a new file called `stretch.js` and practice more with closures. There are no tests for these problems.
@@ -117,4 +117,4 @@ addSix(21); // returns 27
 
 Follow these steps for completing your project.
 
-- [ ] Submit via code grade
+- [*] Submit via code grade
