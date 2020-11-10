@@ -66,20 +66,21 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
-  dansRoll & zoesRoll are both in closure with the outside of it.
+  -dansRoll & zoesRoll are both closure, the roll and name are reaching out to the outer scope level.
 
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
-  The name "Dan" is always the same, the number outcome of the roll can be different each time.
+  -The name "Dan" is always the same, the number outcome of the roll can be different each time.
 
 c. What is the lexical scope of `newRoll`? 
-  the ftn personalDice(name)
+  -the function "personalDice(name)"
 
 ### Task 2c - Exit Ticket
 
 Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/WjSzNh9gDrD8Xn8hw/enY3yPRP3nEm7E).
-
+  Done!
 The completion of these questions is mandatory for MVP. However, passing the quiz doesn't affect your standing as a Lambda School student whatsoever. This is Lambda School testing itself! Please answer honestly and to the best of your ability without using external references.
-
+  Done!
+  
 ### Task 3 - Stretch Goals
 
 After you have completed the requirements, **create** a new file called `stretch.js` and practice more with closures. There are no tests for these problems.

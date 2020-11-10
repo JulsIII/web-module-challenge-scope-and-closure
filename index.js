@@ -91,9 +91,9 @@ function finalScore(inningCB, inningPlayedCB){
   let awayScore= 0;
 
   for(let i = 0; i <= inningPlayedCB; i++){
-    const currentScore = inningCB(inningPlayedCB)
-    homeScore = homeScore + currentScore
-    awayScore = awayScore + currentScore
+   //const currentScore = inningCB(inningPlayedCB)
+    homeScore = homeScore + inningCB()
+    awayScore = awayScore + inningCB()
     }
     return {
         Home: inningCB(),
@@ -164,17 +164,19 @@ function scoreboard(getInningScoreCB, inningCB, inningPlayedCB) {
   let awayScore = 0;
 
   for(let i = 0; i <= inningPlayedCB; i++){
-    const currentScore = inningCB(inningPlayedCB)
-    homeScore = homeScore + currentScore.Home
-    awayScore = awayScore + currentScore.Away
+    const currentScore = getInningScoreCB(inningCB);
+    homeScore = homeScore + currentScore.Home;
+    awayScore = awayScore + currentScore.Away;
     gameTotal.push(`Inning ${i}: Away ${currentScore.Away} - Home ${currentScore.Home}`);
+    
+    // if(homeScore === awayScore){
+    // gameTotal.push(`This game will require extra innings: Away ${currentScore.Away} - Home ${currentScore.Home}`);
+    // } else {gameTotal.push(`Final Score: Away ${currentScore.Away} - Home ${currentScore.Home}`);
+    //         }
     }
+    
     return gameTotal;
 }
-//gameTotal.push(`Final Score: Away ${currentScore.Away} - Home ${currentScore.Home}`);
-//gameTotal.push(`This game will require extra innings: Away ${currentScore.Away} - Home ${currentScore.Home}`);
-
-
 
 console.log(scoreboard(getInningScore,inning, 9));
 
